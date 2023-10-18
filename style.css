@@ -450,12 +450,11 @@ img{
 	font-size: 16px;
 }
 .The_time {
-	margin: 0;
 	text-align: left;
-	margin: 5px auto 10px 20px;
+	margin: 5px 74px 10px 20px;
 	font-size: 14px;
 	line-height: 20px;
-	width: 93%;
+	width: 88%;
 	font-weight: 400;
 	color: #5e5e7b;
 }

@@ -4,7 +4,7 @@ $(document).ready(function(){
     url:"json/自傳.json",
     success:function(result){
       for(let i=0;i<result.length;i++){
-        the_history.innerHTML+="<div class='The_history'></div><div class='theme' id='"+result[i]['id']+"'><h4 class='theme_title'>"+result[i]['主題']+"</h4><img class='about_img scent' src='"+result[i]['圖片']+"'</img><div class='family_text'><p>"+result[i]['內容']+"</p></div></div></div>";
+        the_history.innerHTML+="<div class='The_history'></div><div class='theme' id='"+result[i]['id']+"'><h4 class='theme_title'>"+result[i]['主題']+"</h4><img class='about_img scent' src='"+result[i]['圖片']+"'</img><div class='family_text'>"+result[i]['內容']+"</div></div></div>";
       }
     }  
   });
@@ -137,14 +137,14 @@ $(document).ready(function(){
   }
   // 讀書計畫區塊1
   $(".open_all_1").on("click",function(){
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < 4; i++) {
       let The_time = document.getElementsByClassName("The_time");
       $(The_time[i]).slideToggle(200);
     }
   });
     // 讀書計畫區塊2
   $(".open_all_2").on("click",function(){
-    for (i = 3; i < 8; i++) {
+    for (i = 4; i < 8; i++) {
       let The_time = document.getElementsByClassName("The_time");
       $(The_time[i]).slideToggle(200);
     }
@@ -158,6 +158,10 @@ $(document).ready(function(){
   $(".Table").click(function(){
     $(".The_Table").slideToggle();
   }); 
+    //網頁說明目錄
+    $(".class_2").click(function(){
+      $(".The_class_2").slideToggle();
+    }); 
 
   // 主選項打開副選項
   let Main_option= document.getElementsByClassName("Main_options"); 
